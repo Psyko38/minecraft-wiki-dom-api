@@ -24,13 +24,12 @@ hr {
 
 body {
 	background-image: url(asset/BlackBg.png);
-	padding: 0;
-	border: 0;
 }
 
 nav {
 	display: grid;
 	grid-template-columns: 1fr 1fr 0.2fr;
+	height: 8vh;
 }
 
 nav > .ico {
@@ -92,6 +91,14 @@ nav > .search {
 
 main {
 	background-color: #e6eff4;
+	padding: 5px 50px;
+	border-radius: 4px;
+	margin: 0 30px;
+	position: absolute;
+	top: 35%;
+	display: flex;
+	flex-direction: column;
+	gap: 2vw;
 }
 
 section.info {
@@ -106,6 +113,11 @@ section.info {
 section.InfoAI {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+
+section.InfoAI > div > p:last-child,
+form > button {
+	margin-top: 2vw;
 }
 
 section.list > div:first-child > p:first-child {
@@ -143,13 +155,73 @@ section.list > section > div.Search > button {
 	color: transparent;
 }
 
-section.list > section > div {
-	display: grid;
-    grid-template-columns: repeat(5, 1fr);
+section.list > div > p:last-child {
+	margin-top: 2vw;
 }
 
-section.list > section > div > input {
-	display: grid;
-    grid-template-columns: repeat(5, 1fr);
+form {
+	padding: 0 50px;
 }
 
+form > .Search {
+	display: flex;
+	background-color: white;
+	border-radius: 666px;
+	padding: 10px 15px;
+	margin-bottom: 5vw;
+	margin-top: 5vw;
+}
+
+form > .Search > input {
+	width: 98%;
+	color: #3a3a3a;
+	font-family: Rubik;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	vertical-align: middle;
+}
+
+form > .Search > * {
+	border: 0;
+	color: transparent;
+}
+
+form > div:nth-child(2) {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+form > div:nth-child(2) > div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+form > div:nth-child(2) > div > input {
+	width: 50%;
+}
+
+form > div:nth-child(3) {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 2.5vw;
+}
+
+form > div:nth-child(3) > button {
+	border: 0;
+	color: #ffffff;
+	background: #4f8c69;
+	border-radius: 666px;
+	padding: 10px 20px;
+	font-family: Rubik;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	vertical-align: middle;
+}
