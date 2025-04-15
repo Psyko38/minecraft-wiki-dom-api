@@ -16,7 +16,12 @@
 			</div>
 			<div class="search">
 				<button><img src="asset/Search.svg" alt="Go" /></button>
-				<input type="text" name="search" id="shearch" placeholder="Search..." />
+				<input
+					type="text"
+					name="search"
+					id="shearch"
+					placeholder="Search..."
+				/>
 			</div>
 			<button class="Burger">
 				<div></div>
@@ -35,8 +40,8 @@
 				<div>
 					<p class="Bolder">This page use many images.</p>
 					<p>
-						It is not recommended for people with limited or slow internet
-						connections to read through this page.
+						It is not recommended for people with limited or slow
+						internet connections to read through this page.
 					</p>
 				</div>
 			</section>
@@ -44,15 +49,17 @@
 				<div>
 					<p>
 						An <span class="Bolder">Entity</span> is an AI-driven
-						game entity resembling a living creature. Besides its common
-						meaning, the term "mob" is short for "mobile entity".[1] All
-						entities can be attacked and hurt (from falling, attacked by
-						a player or another entity, falling into the void, hit by an arrow,
-						etc), and have some form of voluntary movement.
+						game entity resembling a living creature. Besides its
+						common meaning, the term "mob" is short for "mobile
+						entity".[1] All entities can be attacked and hurt
+						(from falling, attacked by a player or another entity,
+						falling into the void, hit by an arrow, etc), and have
+						some form of voluntary movement.
 					</p>
 					<p>
-						Different types of entities often have unique AI and drop good or
-						bad loot depending on the entity that was killed.
+						Different types of entities often have unique AI and
+						drop good or bad loot depending on the entity that was
+						killed.
 					</p>
 				</div>
 				<img src="asset/Mobs.png" alt="Mobs List" />
@@ -63,43 +70,83 @@
 					<hr />
 					<p>
 						Entities are classifie by their nature from the player's
-						perspective. You can search for one or multiples entities by their
-						name using the search bar or simply by filling appropriate filters
-						(type, health, armor, damage, etc..)
+						perspective. You can search for one or multiples
+						entities by their name using the search bar or simply by
+						filling appropriate filters (type, health, armor,
+						damage, etc..)
 					</p>
 				</div>
 				<section>
-					<div class="Search">
-						<img src="asset/Search.svg" alt="Search" />
-						<input type="text" name="MobSearch" id="MobSearch" />
-					</div>
 					<div>
-						<div>
-							<p>Classification</p>
-							<select name="Classification" id="Classification">
-								<option value="Choose">Choose</option>
-							</select>
-						</div>
-						<div>
-							<p>Type</p>
-							<select name="Type" id="Type">
-								<option value="Choose">Choose</option>
-							</select>
-						</div>
-						<div>
-							<p>Health</p>
-							<input type="number" name="Health" id="Health" placeholder="10" />
-						</div>
-						<div>
-							<p>Armor</p>
-							<input type="number" name="Armor" id="Armor" placeholder="12" />
-						</div>
-						<div>
-							<p>Armor</p>
-							<input type="number" name="Damage" id="Damage" placeholder="2" />
-						</div>
+						<form action="API">
+							<div class="Search">
+								<img src="asset/Search.svg" alt="Search" />
+								<input
+									type="text"
+									name="MobSearch"
+									id="MobSearch"
+								/>
+							</div>
+							<div>
+								<div>
+									<label for="Classification"
+										>Classification</label
+									>
+									<select
+										name="Classification"
+										id="Classification"
+									>
+										<option value="arthropod">
+											arthropod
+										</option>
+										<option value="undead">undead</option>
+										<option value="animal">animal</option>
+										<option value="aquatic">aquatic</option>
+										<option value="monster">monster</option>
+									</select>
+								</div>
+								<div>
+									<label for="Type">Type</label>
+									<select name="Type" id="Type">
+										<option value="passive">passive</option>
+										<option value="neutral">neutral</option>
+										<option value="hostile">hostile</option>
+									</select>
+								</div>
+								<div>
+									<label for="Health">Health</label>
+									<input
+										type="number"
+										name="Health"
+										id="Health"
+										placeholder="10"
+									/>
+								</div>
+								<div>
+									<label for="Armor">Armor</label>
+									<input
+										type="number"
+										name="Armor"
+										id="Armor"
+										placeholder="12"
+									/>
+								</div>
+								<div>
+									<label for="Damage">Damage</label>
+									<input
+										type="number"
+										name="Damage"
+										id="Damage"
+										placeholder="2"
+									/>
+								</div>
+							</div>
+							<div>
+								<button type="submit">SEARCH</button>
+							</div>
+						</form>
 					</div>
-					<button>SEARCH</button>
+
 					<hr />
 					<div>
 						<p>No entity found</p>
