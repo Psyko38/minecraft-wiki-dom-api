@@ -4,6 +4,109 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="main.css" />
 	</head>
-	<body></body>
+	<body>
+		<nav>
+			<div class="ico">
+				<img src="asset/Ico.png" alt="Ico" />
+				<p>Minecraft wiki</p>
+			</div>
+			<div class="search">
+				<button><img src="asset/Search.svg" alt="Go" /></button>
+				<input type="text" name="search" id="shearch" placeholder="Search..." />
+			</div>
+			<button class="Burger">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
+		</nav>
+		<div class="Bg">
+			<div class="Cloud"></div>
+			<div class="img"></div>
+		</div>
+		<main>
+			<h1>Explore Minecraft entities</h1>
+			<section class="info">
+				<img src="asset/stub-image.png" alt="!!!" />
+				<div>
+					<p class="Bolder">This page use many images.</p>
+					<p>
+						It is not recommended for people with limited or slow internet
+						connections to read through this page.
+					</p>
+				</div>
+			</section>
+			<section class="InfoAI">
+				<div>
+					<p>
+						An <span class="Bolder">Entity</span> is an AI-driven
+						game entity resembling a living creature. Besides its common
+						meaning, the term "mob" is short for "mobile entity".[1] All
+						entities can be attacked and hurt (from falling, attacked by
+						a player or another entity, falling into the void, hit by an arrow,
+						etc), and have some form of voluntary movement.
+					</p>
+					<p>
+						Different types of entities often have unique AI and drop good or
+						bad loot depending on the entity that was killed.
+					</p>
+				</div>
+				<img src="asset/Mobs.png" alt="Mobs List" />
+			</section>
+			<section class="list">
+				<div>
+					<p>List of entities</p>
+					<hr />
+					<p>
+						Entities are classifie by their nature from the player's
+						perspective. You can search for one or multiples entities by their
+						name using the search bar or simply by filling appropriate filters
+						(type, health, armor, damage, etc..)
+					</p>
+				</div>
+				<section>
+					<div class="Search">
+						<img src="asset/Search.svg" alt="Search" />
+						<input type="text" name="MobSearch" id="MobSearch" />
+					</div>
+					<div>
+						<div>
+							<p>Classification</p>
+							<select name="Classification" id="Classification">
+								<option value="Choose">Choose</option>
+							</select>
+						</div>
+						<div>
+							<p>Type</p>
+							<select name="Type" id="Type">
+								<option value="Choose">Choose</option>
+							</select>
+						</div>
+						<div>
+							<p>Health</p>
+							<input type="number" name="Health" id="Health" placeholder="10" />
+						</div>
+						<div>
+							<p>Armor</p>
+							<input type="number" name="Armor" id="Armor" placeholder="12" />
+						</div>
+						<div>
+							<p>Armor</p>
+							<input type="number" name="Damage" id="Damage" placeholder="2" />
+						</div>
+					</div>
+					<button>SEARCH</button>
+					<hr />
+					<div>
+						<p>No entity found</p>
+						<img src="asset/Err.svg" alt=":(" />
+					</div>
+				</section>
+			</section>
+		</main>
+	</body>
 </html>
