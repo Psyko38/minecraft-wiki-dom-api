@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+	font-family: "Rubik", sans-serif;
+}
+body {
+	margin: 0;
+	background-image: url("../asset/BlackBg.png");
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+hr {
+	border: solid 2px rgba(79, 140, 105, 1);
+}
+
+.ciel {
+	background: linear-gradient(
+		180deg,
+		rgb(217, 148, 87) 0%,
+		rgba(205, 134, 62) 35.58%,
+		rgba(133, 170, 237) 65.87%,
+		rgba(153, 214, 228) 100%
+	);
+	height: 25vh;
+	width: 100%;
+}
+
+.terre {
+	width: 100%;
+	height: 265px;
+	background-image: url("../asset/background-dirt.png");
+}
+
+.info {
+	background-color: rgba(230, 239, 244, 1);
+	padding: 20px;
+	border-radius: 5px;
+	width: 65%;
+}
+
+.surligne {
+	color: rgba(2, 70, 241, 1);
+	text-decoration: underline;
+	font-weight: 300;
+}
+.margin-haut {
+	margin-top: 0;
+}
+.margin-bas {
+	margin-bottom: 0;
+}
+
+.arbre {
+	background-color: rgba(245, 226, 188, 1);
+	border-left: 5px solid rgba(194, 172, 127, 1);
+	display: flex;
+	align-items: center;
+}
