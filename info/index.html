@@ -18,7 +18,7 @@
 					<a class="surligne">Minecraft Entities</a>,
 					<a class="surligne">Animal mobs</a>
 				</p>
-				<h2>Armadillo</h2>
+				<h2 id="titre"></h2>
 				<div class="arbre">
 					<img src="../asset/Tree.png" alt="arbre" />
 					<div>
@@ -29,17 +29,19 @@
 					</div>
 				</div>
 				<div class="description">
-					<p><span></span></p>
-					<div class="mobe">
+					<p class="descipt" id="descipt">
+						<span class="gras" id="nom-descipt"></span>
+					</p>
+					<div class="mobe couleur">
 						<div class="nom">
-							<img src="" alt="icon" />
-							<p class="blanc"></p>
+							<img id="icon" src="" alt="icon" class="icon" />
+							<p class="blanc" id="nom"></p>
 						</div>
-						<img src="" alt="mobe" />
+						<img src="" alt="mobe" id="image" class="image" />
 						<div class="into-mobe">
 							<p class="gras bleu">Health</p>
 							<div class="nombre">
-								<p></p>
+								<p id="vie"></p>
 								<img src="../asset/Heat.png" alt="vie" />
 							</div>
 						</div>
@@ -47,7 +49,7 @@
 						<div class="into-mobe">
 							<p class="gras">Armor</p>
 							<div class="nombre">
-								<p></p>
+								<p id="armure"></p>
 								<img src="../asset/Armor.png" alt="armure" />
 							</div>
 						</div>
@@ -55,32 +57,33 @@
 						<div class="into-mobe">
 							<p class="gras">Damage</p>
 							<div class="nombre">
-								<p></p>
+								<p id="dega"></p>
 								<img src="../asset/Heat.png" alt="déga" />
 							</div>
 						</div>
 						<hr />
 						<div class="into-mobe">
 							<p class="gras">Classification</p>
-							<p class="surligne"></p>
+							<a class="surligne" id="class"></a>
 						</div>
 						<hr />
 						<div class="into-mobe">
 							<p class="gras">Behavior</p>
-							<p class="fint"></p>
+							<p class="fint" id="caractaire"></p>
 						</div>
 						<hr />
 						<button><span class="blanc">DETAILS</span></button>
 						<div class="taille">
 							<p class="gras">Size</p>
 							<div>
-								<p class="fint">Height: <span></span> blocks</p>
-								<p class="fint">Width: <span></span> blocks</p>
+								<p class="fint">Height: <span id="largeur"></span> blocks</p>
+								<p class="fint">Width: <span id="longeur"></span> blocks</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
+		<script src="main.js"></script>
 	</body>
 </html>

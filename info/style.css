@@ -20,7 +20,6 @@ h2 {
 }
 
 hr {
-	border: solid 1px rgba(79, 140, 105, 1);
 	width: 100%;
 	margin: 0;
 }
@@ -39,6 +38,10 @@ hr {
 }
 .bleu {
 	color: rgba(2, 70, 241, 1);
+}
+
+.image {
+	max-width: 70%;
 }
 
 .ciel {
@@ -91,7 +94,6 @@ hr {
 }
 
 .mobe {
-	border: 2px solid rgba(79, 140, 105, 1);
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
@@ -100,16 +102,20 @@ hr {
 }
 
 .nom {
-	background: rgba(79, 140, 105, 1);
 	box-shadow: -4px -4px 2px 0px rgba(0, 0, 0, 0.25) inset;
 	padding: 15px;
 	width: 90%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.icon {
+	width: 15%;
 }
 
 button {
-	background: rgba(79, 140, 105, 1);
 	box-shadow: -4px -4px 2px 0px rgba(0, 0, 0, 0.25) inset;
 	padding: 15px;
 	width: 100%;
@@ -126,6 +132,9 @@ button {
 .nombre {
 	display: flex;
 	gap: 5px;
+	align-items: center;
+	font-size: 12px;
+	font-weight: 500;
 }
 
 .taille {
@@ -135,17 +144,68 @@ button {
 	align-items: center;
 }
 
+.descipt {
+	width: 100%;
+	margin: 15px 0;
+}
+
 @media screen and (min-width: 496px) {
 	.description {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 	.mobe {
 		width: 45%;
+	}
+	.descipt {
+		width: 48%;
 	}
 }
 @media screen and (min-width: 851px) {
 	.mobe {
 		width: 35%;
 	}
+	.descipt {
+		width: 60%;
+	}
+}
+
+.passive {
+	border: 2px solid rgba(79, 140, 105, 1);
+}
+.passive > button {
+	background: rgba(79, 140, 105, 1);
+}
+.passive > .nom {
+	background: rgba(79, 140, 105, 1);
+}
+.passive > hr {
+	border: solid 1px rgba(79, 140, 105, 1);
+}
+
+.neutral {
+	border: 2px solid rgba(227, 181, 153, 1);
+}
+.neutral > button {
+	background: rgba(227, 181, 153, 1);
+}
+.neutral > .nom {
+	background: rgba(227, 181, 153, 1);
+}
+.neutral > hr {
+	border: solid 1px rgba(227, 181, 153, 1);
+}
+
+.hostile {
+	border: 2px solid rgba(210, 70, 70, 1);
+}
+.hostile > button {
+	background: rgba(210, 70, 70, 1);
+}
+.hostile > .nom {
+	background: rgba(210, 70, 70, 1);
+}
+.hostile > hr {
+	border: solid 1px rgba(210, 70, 70, 1);
 }
