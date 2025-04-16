@@ -4,9 +4,12 @@
 	font-family: Rubik;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 100%;
-	letter-spacing: 0%;
 	vertical-align: middle;
+}
+
+h1 {
+	margin: 0;
+	padding-top: 15px;
 }
 
 hr {
@@ -26,9 +29,20 @@ body {
 	background-image: url(asset/BlackBg.png);
 }
 
+nav p {
+	color: #ffffff;
+	font-family: Rubik;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	vertical-align: middle;
+}
+
 nav {
 	display: grid;
-	grid-template-columns: 1fr 1fr 0.2fr;
+	grid-template-columns: 1fr 1fr 1fr 0.2fr;
 	height: 8vh;
 }
 
@@ -37,6 +51,7 @@ nav > .ico {
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: row;
+	gap: 2vw;
 }
 
 nav > .search > button {
@@ -108,11 +123,18 @@ section.info {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	color: #3a3a3a;
+	padding: 2vw;
+}
+
+section.info > img {
+	padding-right: 1vw;
 }
 
 section.InfoAI {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.5fr 1fr;
+	justify-items: center;
 }
 
 section.InfoAI > div > p:last-child,
@@ -190,17 +212,23 @@ form > .Search > * {
 
 form > div:nth-child(2) {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 }
 
 form > div:nth-child(2) > div {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	margin-right: 5vw;
+	margin-top: 5vw;
 }
 
-form > div:nth-child(2) > div > input {
-	width: 50%;
+form > div:nth-child(2) > div > input,
+form > div:nth-child(2) > div > select {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 form > div:nth-child(3) {
@@ -224,4 +252,21 @@ form > div:nth-child(3) > button {
 	letter-spacing: 0%;
 	text-align: center;
 	vertical-align: middle;
+}
+
+label {
+	color: #3a3a3a;
+	font-family: Rubik;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.list > section > div:nth-child(3) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
