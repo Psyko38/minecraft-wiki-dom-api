@@ -134,3 +134,18 @@ button {
 	justify-content: space-between;
 	align-items: center;
 }
+
+@media screen and (min-width: 496px) {
+	.description {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.mobe {
+		width: 45%;
+	}
+}
+@media screen and (min-width: 851px) {
+	.mobe {
+		width: 35%;
+	}
+}
