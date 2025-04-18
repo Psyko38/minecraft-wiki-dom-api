@@ -1,191 +1,192 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 :root {
-  font-family: Rubik;
-  color: white;
+	font-family: Rubik;
+	color: white;
 }
 
 body {
-  background-image: url("asset/img/site-background-light.png");
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
+	background-image: url("asset/img/site-background-light.png");
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
 }
 
 header {
-  width: 100%;
+	width: 100%;
 }
 
 nav {
-  padding: 0 2vmin;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  width: 98%;
-  min-height: 60px;
-  height: 10vmin;
+	padding: 0 2vmin;
+	display: grid;
+	grid-template-columns: 1.2fr 1fr 1fr;
+	width: 98%;
+	min-height: 60px;
+	height: 10vmin;
 }
 
 nav > div:nth-child(1) {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2vmin;
-  width: 80%;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2vmin;
+	width: 80%;
 }
 
 .Select p {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 nav > div:nth-child(1) > a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: white;
-  text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+	text-decoration: none;
 }
 
 nav > div:nth-child(1) > a:nth-child(2),
 nav > div:nth-child(1) > a:nth-child(3),
 nav > div:nth-child(1) > a:nth-child(4) {
-  display: none;
+	display: none;
 }
 
 nav > div:nth-child(2) {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  background-color: white;
-  border-radius: 666px;
-  margin: 2vmin 0;
-  padding-left: 0.8vw;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	background-color: white;
+	border-radius: 666px;
+	margin: 2vmin 0;
+	padding-left: 0.8vw;
 }
 
 nav > div:nth-child(2) > input {
-  border: 0;
-  background-color: transparent;
-  width: 100%;
+	border: 0;
+	background-color: transparent;
+	width: 100%;
+	outline: none;
 }
 
 nav > div:nth-child(3) > img {
-  display: none;
+	display: none;
 }
 
 nav > div:nth-child(3) {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 nav > div:nth-child(3) > button {
-  border: 0;
-  background-color: transparent;
-  width: 10vw;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
+	border: 0;
+	background-color: transparent;
+	width: 10vw;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
 }
 
 nav > div:nth-child(3) > button > div {
-  border-bottom: 3px solid #ffffff;
-  height: 20%;
+	border-bottom: 3px solid #ffffff;
+	height: 20%;
 }
 
 .Sky {
-  background: linear-gradient(
-    180deg,
-    rgba(217, 148, 87) 0%,
-    rgba(205, 134, 62) 35.58%,
-    rgba(133, 170, 237) 65.87%,
-    rgba(153, 214, 228) 100%
-  );
-  height: 20vmin;
+	background: linear-gradient(
+		180deg,
+		rgba(217, 148, 87) 0%,
+		rgba(205, 134, 62) 35.58%,
+		rgba(133, 170, 237) 65.87%,
+		rgba(153, 214, 228) 100%
+	);
+	height: 20vmin;
 }
 
 .BgImg {
-  background-image: url("asset/img/background-dirt.png");
-  height: 265px;
+	background-image: url("asset/img/background-dirt.png");
+	height: 265px;
 }
 
 main {
-  position: absolute;
-  top: 35vh;
-  left: 5vw;
-  width: 85vw;
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 0 3vmin;
+	position: absolute;
+	top: 35vh;
+	left: 5vw;
+	width: 85vw;
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 0 3vmin;
 }
 
 main > * {
-  color: #3a3a3a;
+	color: #3a3a3a;
 }
 
 .media {
-  display: none;
-  background-color: #3a3a3af2;
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
+	display: none;
+	background-color: #3a3a3af2;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
 }
 
 .media > div:first-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 
 .media > div > button {
-  border: 0;
-  background: transparent;
-  padding: 2vh 2vh 0 0;
+	border: 0;
+	background: transparent;
+	padding: 2vh 2vh 0 0;
 }
 
 .media > div:last-child {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .media > div:last-child > div {
-  transform: scale(200%);
-  height: 20vmin;
-  width: 20vmin;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+	transform: scale(200%);
+	height: 20vmin;
+	width: 20vmin;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 
 .media > div:last-child > div > a {
-  text-decoration: none;
-  color: white;
+	text-decoration: none;
+	color: white;
 }
 
 @media screen and (min-width: 600px) {
-  nav > div:nth-child(3) > img {
-    display: unset;
-  }
+	nav > div:nth-child(3) > img {
+		display: unset;
+	}
 
-  nav > div:nth-child(3) > button {
-    display: none;
-  }
+	nav > div:nth-child(3) > button {
+		display: none;
+	}
 
-  nav > div:nth-child(1) > a:nth-child(2),
-  nav > div:nth-child(1) > a:nth-child(3),
-  nav > div:nth-child(1) > a:nth-child(4) {
-    display: flex;
-  }
+	nav > div:nth-child(1) > a:nth-child(2),
+	nav > div:nth-child(1) > a:nth-child(3),
+	nav > div:nth-child(1) > a:nth-child(4) {
+		display: flex;
+	}
 
-  nav > div:nth-child(1) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2vmin;
-    width: 80%;
-  }
+	nav > div:nth-child(1) {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2vmin;
+		width: 80%;
+	}
 
-  nav {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
+	nav {
+		grid-template-columns: 2fr 1fr 1fr;
+	}
 }
