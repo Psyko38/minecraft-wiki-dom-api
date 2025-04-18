@@ -95,3 +95,100 @@ form > div:nth-child(3) {
 	flex-direction: row;
 	justify-content: center;
 }
+
+.Passive h2,
+.Passive a {
+	background-color: #4f8c69;
+}
+
+.Neutral h2,
+.Neutral a {
+	background-color: #e3b599;
+}
+
+.Hostile h2,
+.Hostile a {
+	background-color: #d24646;
+}
+
+.Passive {
+	border: 2px solid #4f8c69;
+}
+
+.Neutral {
+	border: 2px solid #e3b599;
+}
+
+.Hostile {
+	border: 2px solid #d24646;
+}
+
+.Passive > hr {
+	border: 1px solid #4f8c69;
+	width: 100%;
+}
+
+.Neutral > hr {
+	border: 1px solid #e3b599;
+	width: 100%;
+}
+
+.Hostile > hr {
+	border: 1px solid #d24646;
+	width: 100%;
+}
+
+.result {
+	gap: 5vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.result > div {
+	padding: 2%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.result > div > div:nth-child(3) {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.result > div > div:nth-child(3) > p:first-child {
+	color: #0246f1;
+	font-weight: 300;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 0%;
+	text-decoration-skip-ink: auto;
+}
+
+.result > div > div:nth-child(3) > p:last-child {
+	font-weight: 500;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.result a,
+.result h2 {
+	width: 80%;
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	text-shadow: 2px 2px 2px #00000080;
+	font-family: Rubik;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 2vh 4vh;
+}
