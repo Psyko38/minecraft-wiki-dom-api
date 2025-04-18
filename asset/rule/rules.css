@@ -1,0 +1,36 @@
+.info {
+	background-color: rgba(230, 239, 244, 1);
+	padding: 20px;
+	border-radius: 5px;
+	width: 85%;
+	position: absolute;
+	top: 35%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+span {
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 48px;
+	font-weight: 300;
+}
+h3 {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.surligne {
+	color: rgba(2, 70, 241, 1);
+	text-decoration: solid underline rgba(2, 70, 241, 1) 4px;
+	font-weight: 300;
+}
