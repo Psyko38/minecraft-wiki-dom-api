@@ -11,7 +11,7 @@ MediaBTN.addEventListener("click", () => {
 });
 
 async function mobs() {
-	const resultat = await fetch("http://192.168.1.15:3000/v1/entities/28", {
+	const resultat = await fetch("http://192.168.1.15:3000/v1/entities/15", {
 		method: "GET",
 	});
 	const data = await resultat.json();
