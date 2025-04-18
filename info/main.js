@@ -1,15 +1,3 @@
-const NavBTN = document.querySelector(".burger");
-const MediaBTN = document.querySelector(".MediaBTN");
-const MediaUi = document.querySelector(".media");
-
-NavBTN.addEventListener("click", () => {
-	MediaUi.style.display = "unset";
-});
-
-MediaBTN.addEventListener("click", () => {
-	MediaUi.style.display = "none";
-});
-
 async function mobs() {
 	const resultat = await fetch("http://192.168.1.15:3000/v1/entities/28", {
 		method: "GET",
