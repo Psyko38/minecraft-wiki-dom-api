@@ -1,12 +1,12 @@
 async function mobs() {
-	const resultat = await fetch("http://192.168.1.15:3000/v1/entities/1", {
+	const resultat = await fetch("http://192.168.1.15:3000/v1/entities/28", {
 		method: "GET",
 	});
 	const data = await resultat.json();
 
 	return data;
 }
-//80;74;45;77;28
+//74;28
 
 const titre = document.querySelector("#titre");
 const ND = document.querySelector("#nom-descipt");
