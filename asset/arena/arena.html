@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../../normalize.css" />
+		<link rel="stylesheet" href="../../reset.css" />
+		<link rel="stylesheet" href="../../Main.css" />
+		<link rel="stylesheet" href="arena.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<div>
+					<a href="">
+						<img src="../../asset/img/site-logo.svg" alt="Ico" />
+						<p>Minecraft wiki</p>
+					</a>
+					<a href="" class="Select">
+						<img src="../../asset/img/EXPLORE.svg" alt="🧭" />
+						<p>EXPLORE</p>
+					</a>
+					<a href="">
+						<img src="../../asset/img/ARENA.svg" alt="⚔️" />
+						<p>ARENA</p>
+					</a>
+					<a href="">
+						<img src="../../asset/img/RULES.svg" alt="📖" />
+						<p>RULES</p>
+					</a>
+				</div>
+				<div>
+					<img src="../../asset/img/Search.svg" alt="🔍" />
+					<input
+						type="text"
+						name="Search"
+						id="Search"
+						placeholder="Search..."
+					/>
+				</div>
+				<div>
+					<img src="../../asset/img/Night.svg" alt="🌙" />
+					<button class="burger">
+						<div></div>
+						<div></div>
+						<div></div>
+					</button>
+				</div>
+			</nav>
+		</header>
+		<div class="Sky"></div>
+		<div class="BgImg"></div>
+		<main>
+			<div class="info">
+				<div class="arena">
+					<h2>Arena</h2>
+					<p class="vert">OPEN</p>
+				</div>
+				<p>Choose an entity to spawn inside the <span>Arena</span>.</p>
+				<div class="position">
+					<div>
+						<p class="gras">Entity</p>
+						<select name="mobs" id="mobs-select" class="long">
+							<option value="">Mobs</option>
+						</select>
+					</div>
+					<div>
+						<p class="gras">X Coordinate</p>
+						<input type="number" class="long" />
+					</div>
+					<div>
+						<p class="gras">Z Coordinate</p>
+						<input type="number" class="long" />
+					</div>
+				</div>
+				<button class="vert grand">SPAWN</button>
+				<h3>Arena entities</h3>
+				<hr />
+				<p>
+					This list describe all entities registered inside the
+					<span>Arena</span>.
+				</p>
+				<div class="tableau">
+					<div class="resumet">
+						<p>Entity</p>
+						<p>Name</p>
+						<p>X Coordinate</p>
+						<p>Y Coordinate</p>
+						<p>Strength</p>
+						<p>del</p>
+					</div>
+					<div class="mobs-list"></div>
+				</div>
+			</div>
+		</main>
+		<div class="media">
+			<div>
+				<button class="MediaBTN">
+					<img src="../../asset/img/x.svg" alt="X" />
+				</button>
+			</div>
+			<div>
+				<div>
+					<img src="../../asset/img/EXPLORE.svg" alt="🧭" />
+					<a href="">EXPLORE</a>
+					<img src="../../asset/img/ARENA.svg" alt="⚔️" />
+					<a href="">ARENA</a>
+					<img src="../../asset/img/RULES.svg" alt="📖" />
+					<a href="">RULES</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
