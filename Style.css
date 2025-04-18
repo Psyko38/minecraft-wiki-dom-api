@@ -4,6 +4,10 @@ h1 {
 	vertical-align: middle;
 }
 
+main > * {
+	margin-bottom: 3vmin;
+}
+
 main > div:nth-child(2) {
 	display: flex;
 	flex-direction: row;
@@ -41,6 +45,7 @@ form {
 }
 
 form > .searcha {
+	padding: 0 1.5vmin;
 	display: flex;
 	background-color: white;
 	border-radius: 666px;
@@ -56,6 +61,10 @@ form > .searcha > input {
 	width: 100%;
 }
 
+form > div {
+	margin-top: 3vmin;
+}
+
 form > div:nth-child(2) {
 	width: 100%;
 	display: grid;
@@ -65,4 +74,24 @@ form > div:nth-child(2) {
 form > div:nth-child(2) input,
 form > div:nth-child(2) select {
 	border: 3vmin;
+	width: 50%;
+}
+
+form > div > button {
+	font-family: Rubik;
+	font-weight: 700;
+	font-size: 22px;
+	vertical-align: middle;
+	padding: 0.5vw 2.5vw;
+	background-color: #4f8c69;
+	color: white;
+	border-radius: 666px;
+	border: 0;
+}
+
+form > div:nth-child(3) {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
