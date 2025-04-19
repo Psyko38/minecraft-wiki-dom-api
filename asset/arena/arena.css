@@ -121,18 +121,4 @@ select:disabled {
   form button {
     width: 100%;
   }
-
-}
-
-.cercle {
-	border-radius: 25px;
-}
-.petit-cercle {
-	border-radius: 10px;
-}
-.long-grand {
-	width: 45%;
-}
-.long-peti {
-	width: 10%;
 }
