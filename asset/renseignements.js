@@ -1,24 +1,17 @@
-const NavBTN = document.querySelector(".burger");
-const MediaBTN = document.querySelector(".MediaBTN");
-const MediaUi = document.querySelector(".media");
+const params = new URLSearchParams(window.location.search);
+const paramsObj = Object.fromEntries(params.entries());
 
-NavBTN.addEventListener("click", () => {
-	MediaUi.style.display = "unset";
-});
+API = "http://51.38.232.174:3000";
 
-MediaBTN.addEventListener("click", () => {
-	MediaUi.style.display = "none";
-});
 
-async function mobs() {
-	const resultat = await fetch("http://192.168.1.15:3000/v1/entities/15", {
-		method: "GET",
-	});
-	const data = await resultat.json();
+async function mobs(q) {
+  const resultat = await fetch(`${API}/v1/entities/${q}`, {
+    method: "GET",
+  });
+  const data = await resultat.json();
 
-	return data;
+  return data;
 }
-//74;28
 
 const titre = document.querySelector("#titre");
 const ND = document.querySelector("#nom-descipt");
@@ -35,33 +28,33 @@ const longeur = document.querySelector("#longeur");
 const descipt = document.querySelector("#descipt");
 
 window.addEventListener("DOMContentLoaded", async () => {
-	const data = await mobs();
-	const couleur = document.querySelector(".couleur");
+  const data = await mobs(paramsObj.q);
+  const couleur = document.querySelector(".couleur");
 
-	console.log(data);
+  console.log(data);
 
-	titre.textContent = data.name[0].toUpperCase() + data.name.slice(1);
-	ND.textContent = data.name[0].toUpperCase() + data.name.slice(1);
-	nom.textContent = data.name[0].toUpperCase() + data.name.slice(1);
-	icon.src = data.icon;
-	image.src = data.image;
-	vie.textContent = data.health;
-	armure.textContent = data.armor;
-	dega.textContent = data.strength;
-	classe.textContent =
-		data.classification[0].toUpperCase() + data.classification.slice(1);
-	caractaire.textContent = data.type[0].toUpperCase() + data.type.slice(1);
-	largeur.textContent = data.height;
-	longeur.textContent = data.width;
-	descipt.textContent = data.description;
+  titre.textContent = data.name[0].toUpperCase() + data.name.slice(1);
+  ND.textContent = data.name[0].toUpperCase() + data.name.slice(1);
+  nom.textContent = data.name[0].toUpperCase() + data.name.slice(1);
+  icon.src = data.icon;
+  image.src = data.image;
+  vie.textContent = data.health;
+  armure.textContent = data.armor;
+  dega.textContent = data.strength;
+  classe.textContent =
+    data.classification[0].toUpperCase() + data.classification.slice(1);
+  caractaire.textContent = data.type[0].toUpperCase() + data.type.slice(1);
+  largeur.textContent = data.height;
+  longeur.textContent = data.width;
+  descipt.textContent = data.description;
 
-	if (data.type == "passive") {
-		couleur.classList.add("passive");
-	}
-	if (data.type == "neutral") {
-		couleur.classList.add("neutral");
-	}
-	if (data.type == "hostile") {
-		couleur.classList.add("hostile");
-	}
+  if (data.type == "passive") {
+    couleur.classList.add("passive");
+  }
+  if (data.type == "neutral") {
+    couleur.classList.add("neutral");
+  }
+  if (data.type == "hostile") {
+    couleur.classList.add("hostile");
+  }
 });

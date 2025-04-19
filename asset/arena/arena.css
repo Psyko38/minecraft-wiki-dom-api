@@ -1,70 +1,124 @@
-.info {
-	background-color: rgba(230, 239, 244, 1);
-	padding: 20px;
-	border-radius: 5px;
-	width: 85%;
-	position: absolute;
-	top: 35%;
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 10vmin;
 }
 
-h2 {
-	font-size: 48px;
-	font-weight: 300;
+form input,
+form select {
+  border: 0;
+  border-radius: 1vmin;
+  width: 50%;
 }
-h3 {
-	font-size: 22px;
-	font-weight: 500;
+
+form button {
+  background: #4f8c69;
+  color: white;
+  font-family: Rubik;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 666px;
+  border: 0;
+  width: 50%;
+}
+
+.tab {
+  display: grid;
+}
+
+.tab > div {
+  border: 1px solid #8e8e8e;
+  display: grid;
+  align-items: center;
+  padding: 1vmin 2vmin;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.tab img {
+  height: 50%;
+}
+
+.tab button {
+  font-family: Rubik;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 1vmin;
+  background-color: #f25959;
+  border: 0;
+  width: 8vmin;
+  color: white;
+}
+
+.tab > div:nth-child(1) {
+  background: #d9d9d9;
+}
+
+.tab1 {
+  background: #ffffff;
+}
+
+.tab2 {
+  background: #f4f4f4;
+}
+
+main > div:nth-child(1) {
+  display: flex;
+  gap: 3vmin;
+  flex-direction: row;
+  align-items: center;
+}
+
+main > div:nth-child(1) > p {
+  background-color: #4f8c69;
+  padding: 1vmin;
+  color: #ffffff;
+  font-family: Rubik;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 1vmin;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 span {
-	font-weight: 600;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
-.position {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 100%;
-	justify-items: center;
-}
-.position > div {
-	width: 85%;
+main > * {
+  margin-bottom: 3vmin;
 }
 
-.gras {
-	font-weight: 700;
-	margin-bottom: 10px;
+input:disabled,
+select:disabled {
+  background-color: #dbdbdb;
 }
 
-.long {
-	width: 100%;
+.Off1 > button {
+  background-color: #dbdbdb;
 }
 
-input {
-	outline: none;
-}
-
-hr {
-	width: 100%;
-}
-
-.resumet {
-	background-color: rgba(217, 217, 217, 1);
-	border: 1px solid rgba(142, 142, 142, 1);
-	display: flex;
-	justify-content: space-around;
-	height: 5vh;
-	align-items: center;
-}
-
-.vert {
-	background-color: rgba(79, 140, 105, 1);
-	border: none;
-	font-weight: 700;
-	color: white;
-}
-.grand {
-	font-size: 22px;
+@media screen and (max-width: 600px) {
+  form button {
+    width: 100%;
+  }
 }

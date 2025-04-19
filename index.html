@@ -1,214 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="normalize.css" />
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="Main.css" />
-		<link rel="stylesheet" href="Style.css" />
-	</head>
 
-	<body>
-		<header>
-			<nav>
-				<div>
-					<a href="">
-						<img src="asset/img/site-logo.svg" alt="Ico" />
-						<p>Minecraft wiki</p>
-					</a>
-					<a href="" class="Select">
-						<img src="asset/img/EXPLORE.svg" alt="🧭" />
-						<p>EXPLORE</p>
-					</a>
-					<a href="">
-						<img src="asset/img/ARENA.svg" alt="⚔️" />
-						<p>ARENA</p>
-					</a>
-					<a href="">
-						<img src="asset/img/RULES.svg" alt="📖" />
-						<p>RULES</p>
-					</a>
-				</div>
-				<div>
-					<img src="asset/img/Search.svg" alt="🔍" />
-					<input
-						type="text"
-						name="Search"
-						id="Search"
-						placeholder="Search..."
-					/>
-				</div>
-				<div>
-					<img src="asset/img/Night.svg" alt="🌙" />
-					<button class="burger">
-						<div></div>
-						<div></div>
-						<div></div>
-					</button>
-				</div>
-			</nav>
-		</header>
-		<div class="Sky"></div>
-		<div class="BgImg"></div>
-		<main>
-			<h1>Explore Minecraft entities</h1>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="reset.css" />
+	<link rel="stylesheet" href="Main.css" />
+	<link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+	<header>
+		<nav>
 			<div>
-				<img src="asset/img/minecraft-painting.png" alt="!!" />
-				<div>
-					<p>This page use many images.</p>
-					<p>
-						It is not recommended for people with limited or slow
-						internet connections to read through this page.
-					</p>
-				</div>
+				<a href="index.html" class="Select">
+					<img src="asset/img/site-logo.svg" alt="Ico" />
+					<p>Minecraft wiki</p>
+				</a>
+				<a href="asset/renseignements.html">
+					<img src="asset/img/EXPLORE.svg" alt="🧭" />
+					<p>EXPLORE</p>
+				</a>
+				<a href="asset/arena/arena.html">
+					<img src="asset/img/ARENA.svg" alt="⚔️" />
+					<p>ARENA</p>
+				</a>
+				<a href="asset/rule/rules.html">
+					<img src="asset/img/RULES.svg" alt="📖" />
+					<p>RULES</p>
+				</a>
 			</div>
 			<div>
-				<div>
-					<p>
-						An Entity is an AI-driven game entity resembling a
-						living creature. Besides its common meaning, the term
-						"mob" is short for "mobile entity".[1] All entities can
-						be attacked and hurt (from falling, attacked by
-						a player or another entity, falling into the void, hit
-						by an arrow, etc), and have some form of voluntary
-						movement.
-					</p>
-					<p>
-						Different types of entities often have unique AI and
-						drop good or bad loot depending on the entity that was
-						killed
-					</p>
-				</div>
-				<img
-					src="asset/img/minecraft-mobs-preview.png"
-					alt="MobsList"
-				/>
+				<img src="asset/img/Search.svg" alt="🔍" />
+				<input type="text" name="Search" id="Search" placeholder="Search..." />
 			</div>
-			<h2>List of entities</h2>
-			<hr />
-			<p>
-				Entities are classifie by their nature from the player's
-				perspective. You can search for one or multiples entities by
-				their name using the search bar or simply by filling appropriate
-				filters (type, health, armor, damage, etc..)
-			</p>
-			<form action="Send">
-				<div class="searcha">
-					<img src="asset/img/Search.svg" alt="🔎" />
-					<input type="text" name="Search" id="Search" />
-				</div>
-				<div>
-					<div>
-						<p>Classification</p>
-						<select name="Classification" id="Classification">
-							<option value="Choose">Choose</option>
-							<option value="arthropod">arthropod</option>
-							<option value="undead">undead</option>
-							<option value="animal">animal</option>
-							<option value="aquatic">aquatic</option>
-							<option value="monster">monster</option>
-						</select>
-					</div>
-					<div>
-						<p>Type</p>
-						<select name="Type" id="Type">
-							<option value="Choose">Choose</option>
-							<option value="passive">passive</option>
-							<option value="neutral">neutral</option>
-							<option value="hostile">hostile</option>
-						</select>
-					</div>
-					<div>
-						<p>Health</p>
-						<input
-							placeholder="18"
-							type="text"
-							name="Health"
-							id="Health"
-						/>
-					</div>
-					<div>
-						<p>Armor</p>
-						<input
-							placeholder="12"
-							type="text"
-							name="Armor"
-							id="Armor"
-						/>
-					</div>
-					<div>
-						<p>Damage</p>
-						<input
-							placeholder="2"
-							type="text"
-							name="Damage"
-							id="Damage"
-						/>
-					</div>
-				</div>
-				<div>
-					<button type="submit">SEARCH</button>
-				</div>
-			</form>
-			<hr />
-			<div class="result">
-				<div class="Hostile">
-					<h2>Armadillo</h2>
-					<img
-						src="asset/img/minecraft-mobs-preview.png"
-						alt="Armadillo"
-					/>
-					<div>
-						<p>Animal</p>
-						<p>Hostile</p>
-					</div>
-					<hr />
-					<a
-						href="http://google.com"
-						target="_blank"
-						rel="noopener noreferrer"
-						>SEE MORE</a
-					>
-				</div>
-				<div class="Passive">
-					<h2>Armadillo</h2>
-					<img
-						src="asset/img/minecraft-mobs-preview.png"
-						alt="Armadillo"
-					/>
-					<div>
-						<p>Animal</p>
-						<p>Passive</p>
-					</div>
-					<hr />
-					<a
-						href="http://google.com"
-						target="_blank"
-						rel="noopener noreferrer"
-						>SEE MORE</a
-					>
-				</div>
-			</div>
-		</main>
-		<div class="media">
 			<div>
-				<button class="MediaBTN">
-					<img src="asset/img/x.svg" alt="X" />
+				<img src="asset/img/Night.svg" alt="🌙" />
+				<button class="burger">
+					<div></div>
+					<div></div>
+					<div></div>
 				</button>
 			</div>
+		</nav>
+	</header>
+	<div class="Sky"></div>
+	<div class="BgImg"></div>
+	<main>
+		<h1>Explore Minecraft entities</h1>
+		<div>
+			<img src="asset/img/minecraft-painting.png" alt="!!" />
 			<div>
-				<div>
-					<img src="asset/img/EXPLORE.svg" alt="🧭" />
-					<a href="">EXPLORE</a>
-					<img src="asset/img/ARENA.svg" alt="⚔️" />
-					<a href="">ARENA</a>
-					<img src="asset/img/RULES.svg" alt="📖" />
-					<a href="">RULES</a>
-				</div>
+				<p>This page use many images.</p>
+				<p>
+					It is not recommended for people with limited or slow
+					internet connections to read through this page.
+				</p>
 			</div>
 		</div>
-		<script src="Code.js"></script>
-	</body>
+		<div>
+			<div>
+				<p>
+					An <span>Entity</span> is an AI-driven game entity resembling a
+					living creature. Besides its common meaning, the term
+					"mob" is short for "mobile entity".[1] All entities can
+					be attacked and hurt (from falling, attacked by
+					a player or another entity, falling into the void, hit
+					by an arrow, etc), and have some form of voluntary
+					movement.
+				</p>
+				<p>
+					Different types of entities often have unique AI and
+					drop good or bad loot depending on the entity that was
+					killed
+				</p>
+			</div>
+			<img src="asset/img/minecraft-mobs-preview.png" alt="MobsList" />
+		</div>
+		<h2>List of entities</h2>
+		<hr />
+		<p>
+			Entities are classifie by their nature from the player's
+			perspective. You can search for one or multiples entities by
+			their name using the search bar or simply by filling appropriate
+			filters (type, health, armor, damage, etc..)
+		</p>
+		<form action="Send">
+			<div class="searcha">
+				<img src="asset/img/Search.svg" alt="🔎" />
+				<input type="text" name="Search" id="Search" />
+			</div>
+			<div>
+				<div>
+					<p>Classification</p>
+					<select name="Classification" id="Classification">
+						<option value="Choose">Choose</option>
+						<option value="arthropod">arthropod</option>
+						<option value="undead">undead</option>
+						<option value="animal">animal</option>
+						<option value="aquatic">aquatic</option>
+						<option value="monster">monster</option>
+					</select>
+				</div>
+				<div>
+					<p>Type</p>
+					<select name="Type" id="Type">
+						<option value="Choose">Choose</option>
+						<option value="passive">passive</option>
+						<option value="neutral">neutral</option>
+						<option value="hostile">hostile</option>
+					</select>
+				</div>
+				<div>
+					<p>Health</p>
+					<input placeholder="18" type="text" name="Health" id="Health" />
+				</div>
+				<div>
+					<p>Armor</p>
+					<input placeholder="12" type="text" name="Armor" id="Armor" />
+				</div>
+				<div>
+					<p>Damage</p>
+					<input placeholder="2" type="text" name="Damage" id="Damage" />
+				</div>
+			</div>
+			<div>
+				<button type="submit">SEARCH</button>
+			</div>
+		</form>
+		<hr />
+		<div class="result">
+			<div class="err">
+				<p>No entity found</p>
+				<img src="asset/img/Err.svg" alt="Error">
+			</div>
+		</div>
+	</main>
+	<div class="media">
+		<div>
+			<button class="MediaBTN">
+				<img src="asset/img/x.svg" alt="X" />
+			</button>
+		</div>
+		<div>
+			<div>
+				<img src="../asset/img/EXPLORE.svg" alt="🧭" />
+				<a href="asset/renseignements.html">EXPLORE</a>
+				<img src="../asset/img/ARENA.svg" alt="⚔️" />
+				<a href="/asset/arena/arena.html">ARENA</a>
+				<img src="../asset/img/RULES.svg" alt="📖" />
+				<a href="rule/rules.html">RULES</a>
+			</div>
+		</div>
+	</div>
+	<script src="Code.js"></script>
+	<script src="main.js"></script>
+</body>
+
 </html>
