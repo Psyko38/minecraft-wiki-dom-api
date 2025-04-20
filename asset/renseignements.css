@@ -63,11 +63,10 @@ hr {
 }
 
 .info {
+  width: 100% !important;
   background-color: rgba(230, 239, 244, 1);
-  padding: 20px;
   border-radius: 5px;
   width: 65%;
-  position: absolute;
   top: 35%;
   display: flex;
   flex-direction: column;
