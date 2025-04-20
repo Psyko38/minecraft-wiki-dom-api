@@ -3,7 +3,6 @@ const paramsObj = Object.fromEntries(params.entries());
 
 API = "http://51.38.232.174:3000";
 
-
 async function mobs(q) {
   const resultat = await fetch(`${API}/v1/entities/${q}`, {
     method: "GET",
@@ -46,7 +45,13 @@ window.addEventListener("DOMContentLoaded", async () => {
   caractaire.textContent = data.type[0].toUpperCase() + data.type.slice(1);
   largeur.textContent = data.height;
   longeur.textContent = data.width;
-  descipt.textContent = data.description;
+
+  const name = data.name;
+  const mobName = name[0].toUpperCase() + name.slice(1);
+  const descriptionParts = data.description.split(mobName.toLowerCase());
+  const descriptionHtml = descriptionParts.join(`<span>${mobName}</span>`);
+
+  descipt.innerHTML = descriptionHtml;
 
   if (data.type == "passive") {
     couleur.classList.add("passive");
