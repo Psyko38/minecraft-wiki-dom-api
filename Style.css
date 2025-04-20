@@ -96,7 +96,10 @@ form > div:nth-child(2) select {
   margin-top: 1vmin;
   border-radius: 0.5vmin;
   border: 0;
-  width: 50%;
+  padding: 0.5vmin;
+  width: 70%;
+  font-family: Rubik;
+  font-weight: 700;
 }
 
 form > div > button {
@@ -120,6 +123,9 @@ form > div:nth-child(3) {
 
 .err {
   height: 20%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .err > img {

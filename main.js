@@ -11,8 +11,8 @@ MediaBTN.addEventListener("click", () => {
   MediaUi.style.display = "none";
 });
 
-document.addEventListener("keydown", (e) => {
-  if (e.key == "Enter") {
+Searche.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
     window.location.href = `${window.location.origin}/index.html?q=${Searche.value}`;
   }
 });

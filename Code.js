@@ -3,19 +3,25 @@ const formInput = form.querySelectorAll("input");
 const formSelect = form.querySelectorAll("select");
 let DivResult = document.querySelector(".result");
 const main = document.querySelector("main");
+const errDiv = document.querySelector(".err");
 
 const API = "http://51.38.232.174:3000";
 
 const params = new URLSearchParams(window.location.search);
 const paramsObj = Object.fromEntries(params.entries());
-if (paramsObj.q != "") {
-  Search(paramsObj.q);
-}
 
-function Search(q) {
+window.addEventListener("load", async function () {
+  console.log(paramsObj.q);
+  if (paramsObj.q) {
+    await Search(paramsObj.q);
+    location.hash = "#SearchRes";
+  }
+});
+
+async function Search(q) {
   let parm = "page=0&pageSize=20";
 
-  if (q != "") {
+  if (q) {
     parm += `&name=${q}`;
   } else {
     if (formInput[0].value != "") parm += `&name=${formInput[0].value}`;
@@ -27,7 +33,8 @@ function Search(q) {
     if (formInput[3].value != "") parm += `&strength=${formInput[3].value}`;
   }
 
-  print(parm);
+  await print(parm);
+  return;
 }
 
 async function Get(parms) {
@@ -43,34 +50,23 @@ form.addEventListener("submit", (event) => {
 });
 
 async function print(parm) {
+  errDiv.style.display = "none";
   DivResult.remove();
   DivResult = document.createElement("div");
   DivResult.className = "result";
   main.appendChild(DivResult);
   let JSON = await Get(parm);
   if (JSON.length == 0) {
-    const divErr = document.createElement("div");
-    divErr.className = "err";
-
-    const p = document.createElement("p");
-    p.textContent = "No entity found";
-    divErr.appendChild(p);
-
-    const img = document.createElement("img");
-    img.src = "asset/img/Err.svg";
-    img.alt = "Error";
-    divErr.appendChild(img);
-
-    DivResult.appendChild(divErr);
+    errDiv.style.display = "flex";
   } else {
     for (let i of JSON) {
       console.log(i);
-      add(i.classification, i.image, i.name, i.type, i.id);
+      await add(i.classification, i.image, i.name, i.type, i.id);
     }
   }
 }
 
-function add(classification, image, name, type, id) {
+async function add(classification, image, name, type, id) {
   const divHostile = document.createElement("div");
   divHostile.className = type.toLowerCase();
 
@@ -104,7 +100,6 @@ function add(classification, image, name, type, id) {
 
   const link = document.createElement("a");
   link.href = `asset/renseignements.html?q=${id}`;
-  link.target = "_blank";
   link.rel = "noopener noreferrer";
   link.textContent = "SEE MORE";
   outerDiv.appendChild(link);

@@ -1,14 +1,27 @@
 form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   height: 10vmin;
+  gap: 1vmin;
 }
 
 form input,
 form select {
   border: 0;
-  border-radius: 1vmin;
+  border-radius: 0.5vmin;
   width: 50%;
+  padding: 0.5vmin;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+}
+
+form p {
+  font-weight: 700;
 }
 
 form button {
@@ -38,6 +51,14 @@ form button {
   grid-template-columns: repeat(6, 1fr);
 }
 
+.tab > div p:nth-child(2),
+.tab > div p:nth-child(3),
+.tab > div p:nth-child(4),
+.tab > div p:nth-child(5),
+.tab > div p:nth-child(6) {
+  justify-self: end;
+}
+
 .tab img {
   height: 50%;
 }
@@ -49,11 +70,13 @@ form button {
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
-  border-radius: 1vmin;
+  border-radius: 0.3vmin;
   background-color: #f25959;
   border: 0;
+  padding: 0.5vmin;
   width: 8vmin;
   color: white;
+  justify-self: end;
 }
 
 .tab > div:nth-child(1) {
@@ -108,6 +131,12 @@ main > * {
   margin-bottom: 3vmin;
 }
 
+h2 {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 22px;
+}
+
 input:disabled,
 select:disabled {
   background-color: #dbdbdb;
@@ -117,8 +146,58 @@ select:disabled {
   background-color: #dbdbdb;
 }
 
+.Map {
+  background: #ffffff;
+  border: 1px solid #8c8c8c;
+  height: 15vh;
+  width: 100%;
+  position: relative;
+}
+
+.Map > div {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.Map > div > img {
+  width: 3vmin;
+}
+
+.Map > div > p {
+  background: #d9d9d9;
+  border: 1px solid #8e8e8e;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 80%;
+  left: 80%;
+  width: 30px;
+}
+
 @media screen and (max-width: 600px) {
   form button {
     width: 100%;
+  }
+
+  form {
+    height: 15vmin;
+  }
+
+  .tab button {
+    font-size: 9px;
+    width: 8vw;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  form {
+    height: 20vmin;
+  }
+
+  .tab button {
+    font-size: 10px;
+    width: 8vw;
   }
 }

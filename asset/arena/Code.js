@@ -1,5 +1,7 @@
 let tabdiv = document.querySelector(".tab");
+let mapdiv = document.querySelector(".Map");
 const maintab = document.querySelector(".maintab");
+const MainMap = document.querySelector(".MainMap");
 const EntitySelect = document.querySelector("#Entity");
 const sing = document.querySelector("main > div:nth-child(1) > p");
 const form = document.querySelector("form");
@@ -13,13 +15,13 @@ Setup();
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
-  let x1 = Math.floor(Math.random() * (25 - -12 + 1)) + -12;
-  let z1 = Math.floor(Math.random() * (0 - -16 + 1)) + -16;
-  if (formInput[0].value) x1 = formInput[0].value - 12;
-  if (formInput[1].value) z1 = `-${Math.abs(formInput[1].value)}`;
-  if (x1 >= -12 && x1 <= 25 && z1 >= -16 && z1 <= 0) {
+  let x1 = Math.floor(Math.random() * 37);
+  let z1 = Math.floor(Math.random() * 17);
+  if (formInput[0].value) x1 = Math.abs(formInput[0].value);
+  if (formInput[1].value) z1 = Math.abs(formInput[1].value);
+  if (x1 >= 0 && x1 <= 37 && z1 >= 0 && z1 <= 16) {
     await Post(formSelect[0].value, x1, z1);
-    PrintTab();
+    Refresh();
   } else {
     alert(
       "La coordonnée X doit être comprise entre 0 et 37, et la coordonnée Y entre 0 et 16."
@@ -28,8 +30,8 @@ form.addEventListener("submit", async function (event) {
 });
 
 async function Setup() {
-  PrintTab();
-  setInterval(PrintTab, 5000);
+  Refresh();
+  setInterval(Refresh, 5000);
   let data = await Fetche("entities");
   for (let i of data) {
     const newe = new Option(i.name, i.id);
@@ -50,6 +52,7 @@ async function Post(id, x, z) {
     }),
   });
   const rep = await Q.json();
+  console.log(rep);
   return rep;
 }
 
@@ -61,11 +64,11 @@ async function Fetche(URL) {
 
 async function Removea(id) {
   const q = await fetch(`${API}/v1/arena/entities/${id}`, { method: "DELETE" });
-  await PrintTab();
+  await Refresh();
   return q;
 }
 
-async function PrintTab() {
+async function Refresh() {
   let JSON = await Fetche("arena/entities");
   let statuss = await Fetche("arena");
   sing.textContent = statuss.status.toUpperCase();
@@ -78,6 +81,71 @@ async function PrintTab() {
   }
   if (JSON.length == 0 && TabData == 0) return;
   TabData = JSON.length;
+  await AddTab(JSON);
+  await AddMap(JSON);
+}
+
+async function AddMap(JSON) {
+  mapdiv.remove();
+  mapdiv = document.createElement("div");
+  mapdiv.className = "Map";
+  MainMap.appendChild(mapdiv);
+
+  for (let i = 0; i < JSON.length; i++) {
+    AddToMap(
+      JSON[i].entity.icon,
+      JSON[i].x,
+      JSON[i].z,
+      JSON[i].arena.height,
+      JSON[i].arena.width,
+      0
+    );
+  }
+  if (JSON.length == 0) {
+    AddToMap("../img/Boss.svg", "", "", "", "", 1);
+  } else {
+    AddToMap(
+      "../img/Boss.svg",
+      Math.floor(JSON[0].arena.width / 2),
+      Math.floor(JSON[0].arena.height / 2),
+      JSON[0].arena.height,
+      JSON[0].arena.width,
+      1
+    );
+  }
+}
+
+function AddToMap(imgUrl, x, y, maxY, maxX, type) {
+  const container = document.createElement("div");
+  container.style.zIndex = y;
+
+  container.style.left = `${(x / maxX) * 100}%`;
+  container.style.top = `${(y / maxY) * 100}%`;
+
+  const image = document.createElement("img");
+  image.src = imgUrl;
+  image.alt = `Point (${x}, ${y})`;
+
+  const coordText = document.createElement("p");
+  coordText.textContent = `${x}, ${y}`;
+  if (type) {
+    coordText.style.background = "#FFFFFF";
+    coordText.style.border = "1px solid #F25959";
+  }
+
+  if (maxX == "" && type) {
+    container.style.left = "50%";
+    container.style.top = "50%";
+    coordText.textContent = `50%, 50%`;
+  }
+
+  container.appendChild(image);
+  container.appendChild(coordText);
+
+  mapdiv.appendChild(container);
+}
+
+async function AddTab(JSON) {
   tabdiv.remove();
   tabdiv = document.createElement("div");
   tabdiv.className = "tab";
